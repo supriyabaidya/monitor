@@ -106,13 +106,13 @@
                         </goals>
                         <configuration>
                             <wsdlFiles>
-                                <wsdlFile>webservice-android.1d35.starter-us-east-1.openshiftapps.com/AndroidWebService.wsdl</wsdlFile>
+                                <wsdlFile>web-service-android-sensor-web-service.1d35.starter-us-east-1.openshiftapps.com/AndroidWebService.wsdl</wsdlFile>
                             </wsdlFiles>
                             <packageName></packageName>
                             <vmArgs>
                                 <vmArg>-Djavax.xml.accessExternalSchema=all</vmArg>
                             </vmArgs>
-                            <wsdlLocation>http://webservice-android.1d35.starter-us-east-1.openshiftapps.com/AndroidWebService?wsdl</wsdlLocation>
+                            <wsdlLocation>http://web-service-android-sensor-web-service.1d35.starter-us-east-1.openshiftapps.com/AndroidWebService?wsdl</wsdlLocation>
                             <staleFile>${project.build.directory}/jaxws/stale/AndroidWebService.stale</staleFile>
                         </configuration>
                         <id>wsimport-generate-AndroidWebService</id>
