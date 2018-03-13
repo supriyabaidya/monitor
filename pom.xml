@@ -99,26 +99,6 @@
                 <groupId>org.jvnet.jax-ws-commons</groupId>
                 <artifactId>jaxws-maven-plugin</artifactId>
                 <version>2.3</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>wsimport</goal>
-                        </goals>
-                        <configuration>
-                            <wsdlFiles>
-                                <wsdlFile>web-service-android-sensor-web-service.1d35.starter-us-east-1.openshiftapps.com/AndroidWebService.wsdl</wsdlFile>
-                            </wsdlFiles>
-                            <packageName></packageName>
-                            <vmArgs>
-                                <vmArg>-Djavax.xml.accessExternalSchema=all</vmArg>
-                            </vmArgs>
-                            <wsdlLocation>http://web-service-android-sensor-web-service.1d35.starter-us-east-1.openshiftapps.com/AndroidWebService?wsdl</wsdlLocation>
-                            <staleFile>${project.build.directory}/jaxws/stale/AndroidWebService.stale</staleFile>
-                        </configuration>
-                        <id>wsimport-generate-AndroidWebService</id>
-                        <phase>generate-sources</phase>
-                    </execution>
-                </executions>
                 <dependencies>
                     <dependency>
                         <groupId>javax.xml</groupId>
