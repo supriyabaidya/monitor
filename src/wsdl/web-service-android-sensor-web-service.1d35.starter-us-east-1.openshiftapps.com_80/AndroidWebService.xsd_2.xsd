@@ -16,6 +16,10 @@
 
 <xs:element name="updateUsers" type="tns:updateUsers"/>
 
+<xs:element name="updateUsersLocation" type="tns:updateUsersLocation"/>
+
+<xs:element name="updateUsersLocationResponse" type="tns:updateUsersLocationResponse"/>
+
 <xs:element name="updateUsersResponse" type="tns:updateUsersResponse"/>
 
 <xs:complexType name="getUsers">
@@ -28,8 +32,24 @@
 </xs:sequence>
 </xs:complexType>
 
+<xs:complexType name="updateUsersLocation">
+<xs:sequence>
+<xs:element name="user_name" type="xs:string" minOccurs="0"/>
+<xs:element name="longitude" type="xs:string" minOccurs="0"/>
+<xs:element name="latitude" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateUsersLocationResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
 <xs:complexType name="test">
-<xs:sequence/>
+<xs:sequence>
+<xs:element name="text" type="xs:string" minOccurs="0"/>
+</xs:sequence>
 </xs:complexType>
 
 <xs:complexType name="testResponse">
@@ -43,8 +63,6 @@
 <xs:element name="user_name" type="xs:string" minOccurs="0"/>
 <xs:element name="password" type="xs:string" minOccurs="0"/>
 <xs:element name="token" type="xs:string" minOccurs="0"/>
-<xs:element name="longitude" type="xs:string" minOccurs="0"/>
-<xs:element name="latitude" type="xs:string" minOccurs="0"/>
 <xs:element name="status" type="xs:string" minOccurs="0"/>
 </xs:sequence>
 </xs:complexType>
@@ -59,8 +77,6 @@
 <xs:sequence>
 <xs:element name="user_name" type="xs:string" minOccurs="0"/>
 <xs:element name="token" type="xs:string" minOccurs="0"/>
-<xs:element name="longitude" type="xs:string" minOccurs="0"/>
-<xs:element name="latitude" type="xs:string" minOccurs="0"/>
 <xs:element name="status" type="xs:string" minOccurs="0"/>
 <xs:element name="proximity" type="xs:string" minOccurs="0"/>
 <xs:element name="light" type="xs:string" minOccurs="0"/>

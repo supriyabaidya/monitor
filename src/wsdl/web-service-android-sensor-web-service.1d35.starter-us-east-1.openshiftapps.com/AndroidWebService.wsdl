@@ -19,17 +19,23 @@
 <message name="updateUsersResponse">
 <part name="parameters" element="tns:updateUsersResponse"/>
 </message>
-<message name="getUsers">
-<part name="parameters" element="tns:getUsers"/>
+<message name="updateUsersLocation">
+<part name="parameters" element="tns:updateUsersLocation"/>
 </message>
-<message name="getUsersResponse">
-<part name="parameters" element="tns:getUsersResponse"/>
+<message name="updateUsersLocationResponse">
+<part name="parameters" element="tns:updateUsersLocationResponse"/>
 </message>
 <message name="test">
 <part name="parameters" element="tns:test"/>
 </message>
 <message name="testResponse">
 <part name="parameters" element="tns:testResponse"/>
+</message>
+<message name="getUsers">
+<part name="parameters" element="tns:getUsers"/>
+</message>
+<message name="getUsersResponse">
+<part name="parameters" element="tns:getUsersResponse"/>
 </message>
 <portType name="AndroidWebService">
 <operation name="signUp">
@@ -40,13 +46,17 @@
 <input wsam:Action="http://android.webservice.com/AndroidWebService/updateUsersRequest" message="tns:updateUsers"/>
 <output wsam:Action="http://android.webservice.com/AndroidWebService/updateUsersResponse" message="tns:updateUsersResponse"/>
 </operation>
-<operation name="getUsers">
-<input wsam:Action="http://android.webservice.com/AndroidWebService/getUsersRequest" message="tns:getUsers"/>
-<output wsam:Action="http://android.webservice.com/AndroidWebService/getUsersResponse" message="tns:getUsersResponse"/>
+<operation name="updateUsersLocation">
+<input wsam:Action="http://android.webservice.com/AndroidWebService/updateUsersLocationRequest" message="tns:updateUsersLocation"/>
+<output wsam:Action="http://android.webservice.com/AndroidWebService/updateUsersLocationResponse" message="tns:updateUsersLocationResponse"/>
 </operation>
 <operation name="test">
 <input wsam:Action="http://android.webservice.com/AndroidWebService/testRequest" message="tns:test"/>
 <output wsam:Action="http://android.webservice.com/AndroidWebService/testResponse" message="tns:testResponse"/>
+</operation>
+<operation name="getUsers">
+<input wsam:Action="http://android.webservice.com/AndroidWebService/getUsersRequest" message="tns:getUsers"/>
+<output wsam:Action="http://android.webservice.com/AndroidWebService/getUsersResponse" message="tns:getUsersResponse"/>
 </operation>
 </portType>
 <binding name="AndroidWebServicePortBinding" type="tns:AndroidWebService">
@@ -69,7 +79,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="getUsers">
+<operation name="updateUsersLocation">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -79,6 +89,15 @@
 </output>
 </operation>
 <operation name="test">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="getUsers">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
